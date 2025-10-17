@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CTU Training Solutions — Open Day</title>
+  <meta name="description" content="Welcome to CTU Training Solutions Open Day — demos, talks, and hands-on activities for Cloud, AI, IoT and Data Science." />
+  <style>
+    /* Simple, modern styling — single-file, no frameworks needed */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#5eead4;
+      --muted:#9aa6b2;
+      --glass: rgba(255,255,255,0.04);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#07102a 0%, #071829 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1000px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:0;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    /* Left content */
+    .main{
+      padding:30px;
+      min-height:400px;
+    }
+    header h1{
+      margin:0 0 6px 0;
+      font-size:26px;
+      letter-spacing: -0.4px;
+    }
+    header p.lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
+    }
+
+    .hero{
+      background: linear-gradient(90deg, rgba(94,234,212,0.06), rgba(255,255,255,0.01));
+      padding:18px;
+      border-radius:10px;
+      border:1px solid rgba(94,234,212,0.06);
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .badge{
+      background:var(--glass);
+      padding:8px 12px;
+      border-radius:8px;
+      font-weight:600;
+      color:var(--accent);
+      font-size:14px;
+    }
+    .hero h2{margin:0;font-size:18px}
+    .hero p{margin:2px 0 0 0;color:var(--muted);font-size:14px}
+
+    /* Schedule & demos list */
+    .section{margin-top:20px}
+    .section h3{margin:0 0 10px 0;font-size:16px}
+    .list{
+      background:rgba(255,255,255,0.02);
+      border-radius:10px;
+      padding:12px;
+      border:1px solid rgba(255,255,255,0.025);
+    }
+    .item{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 6px;
+      align-items:center;
+      border-bottom:1px dashed rgba(255,255,255,0.02);
+      font-size:14px;
+    }
+    .item:last-child{border-bottom:none}
+    .item .title{font-weight:600}
+    .item .time{color:var(--muted); font-size:13px}
+
+    /* Right column */
+    .sidebar{
+      padding:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+      border-left:1px solid rgba(255,255,255,0.02);
+    }
+    .card{
+      background:var(--card);
+      padding:14px;
+      border-radius:10px;
+      margin-bottom:14px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .cta{
+      display:block;
+      width:100%;
+      text-align:center;
+      padding:12px;
+      border-radius:10px;
+      font-weight:700;
+      background:linear-gradient(90deg, rgba(94,234,212,0.12), rgba(94,234,212,0.06));
+      border:1px solid rgba(94,234,212,0.14);
+      cursor:pointer;
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr; padding:0}
+      .sidebar{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="pageTitle">
+    <main class="main">
+      <header>
+        <h1 id="pageTitle">Welcome to CTU Training Solutions — Open Day</h1>
+        <p class="lead">Explore hands-on demos and talks in Cloud Administration, AI Software Development, IoT Devices, and Data Science. Come see practical work, ask questions, and sign up for short workshops.</p>
+      </header>
+
+      <section class="hero" aria-label="Highlight">
+        <div class="badge" aria-hidden="true">Open Day • Free</div>
+        <div>
+          <h2>Saturday, October 25, 2025 • 09:00 — 15:00</h2>
+          <p>CTU Training Solutions — Main Hall, 123 Learning Ave.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="scheduleTitle">
+        <h3 id="scheduleTitle">Schedule (Quick view)</h3>
+        <div class="list" role="list">
+          <div class="item" role="listitem">
+            <div class="title">Welcome & Introductions</div>
+            <div class="time">09:00 — 09:30</div>
+          </div>
+          <div class="item">
+            <div class="title">Cloud Administration Demo</div>
+            <div class="time">09:30 — 10:30</div>
+          </div>
+          <div class="item">
+            <div class="title">AI Software Dev Showcase</div>
+            <div class="time">10:45 — 11:45</div>
+          </div>
+          <div class="item">
+            <div class="title">IoT Hands-on Stations</div>
+            <div class="time">12:00 — 13:00</div>
+          </div>
+          <div class="item">
+            <div class="title">Data Science Mini-Workshop</div>
+            <div class="time">13:15 — 14:15</div>
+          </div>
+          <div class="item">
+            <div class="title">Q&A & Sign-up for Courses</div>
+            <div class="time">14:15 — 15:00</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="notesTitle">
+        <h3 id="notesTitle">Notes for visitors</h3>
+        <div class="list small" style="padding:12px;">
+          <ul style="margin:0 0 0 18px; padding:0; color:var(--muted);">
+            <li>Bring a laptop for hands-on stations (Wi-Fi provided).</li>
+            <li>Short 20–30 minute demos repeat throughout the day.</li>
+            <li>All ages welcome. Refreshments available in the foyer.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        Have questions? Email <a href="mailto:info@ctutraining.co.za" style="color:inherit; text-decoration:underline;">info@ctutraining.co.za</a> or call +27 12 345 6789
+      </footer>
+    </main>
+
+    <aside class="sidebar" aria-label="Right sidebar">
+      <div class="card" aria-hidden="false">
+        <h4 style="margin:0 0 8px 0">Featured Demos</h4>
+        <p class="small">Quick examples we'll show:</p>
+        <ul class="small" style="margin:8px 0 0 18px; padding:0;">
+          <li>Cloud: Create a VM & deploy a simple website</li>
+          <li>AI: Build a text classifier (no-code + code)</li>
+          <li>IoT: Sensor → microcontroller → live dashboard</li>
+          <li>Data Science: Load, clean, and visualize sample data</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 6px 0">Plan your visit</h4>
+        <p class="small" style="margin:0 0 10px 0;">Drop by any demo; no pre-registration needed for most sessions. Limited seats for hands-on workshops — sign up early at the desk.</p>
+        <button class="cta" id="moreBtn" aria-controls="popup" aria-expanded="false">More details & sign-up</button>
+      </div>
+
+      <div class="card" id="popup" style="display:none;">
+        <h4 style="margin:0 0 6px 0">How to sign up</h4>
+        <p class="small">Visit the registration desk at the entrance or scan the QR code (paper QR codes available). If you want to reserve a workshop seat now, email <strong>events@ctutraining.co.za</strong>.</p>
+      </div>
+
+      <div class="card small">
+        <strong>Location</strong>
+        <div style="margin-top:8px">CTU Training Solutions — Main Hall<br>123 Learning Ave, Pretoria</div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    // Small JS to toggle extra info — no libraries required
+    (function(){
+      const btn = document.getElementById('moreBtn');
+      const popup = document.getElementById('popup');
+      btn.addEventListener('click', () => {
+        const shown = popup.style.display !== 'none';
+        popup.style.display = shown ? 'none' : 'block';
+        btn.setAttribute('aria-expanded', String(!shown));
+        if(!shown){
+          // scroll into view smoothly on small screens
+          popup.scrollIntoView({behavior:'smooth', block:'center'});
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
